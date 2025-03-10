@@ -1,0 +1,4 @@
+/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/first_structures_cpp.dir
+/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/data_structures_cpp.dir

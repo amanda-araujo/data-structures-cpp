@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/first_structures_cpp.dir/first_structures_cpp.cpp.o  -o first_structures_cpp 
