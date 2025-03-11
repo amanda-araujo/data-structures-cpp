@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named search-graphs
+
+# Build rule for target.
+search-graphs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 search-graphs
+.PHONY : search-graphs
+
+# fast build rule for target.
+search-graphs/fast:
+	$(MAKE) -f CMakeFiles/search-graphs.dir/build.make CMakeFiles/search-graphs.dir/build
+.PHONY : search-graphs/fast
+
+#=============================================================================
 # Target rules for targets named graphs
 
 # Build rule for target.
@@ -236,6 +249,36 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+search-graphs.o: search-graphs.cpp.o
+
+.PHONY : search-graphs.o
+
+# target to build an object file
+search-graphs.cpp.o:
+	$(MAKE) -f CMakeFiles/search-graphs.dir/build.make CMakeFiles/search-graphs.dir/search-graphs.cpp.o
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/search-graphs.cpp.o
+.PHONY : search-graphs.cpp.o
+
+search-graphs.i: search-graphs.cpp.i
+
+.PHONY : search-graphs.i
+
+# target to preprocess a source file
+search-graphs.cpp.i:
+	$(MAKE) -f CMakeFiles/search-graphs.dir/build.make CMakeFiles/search-graphs.dir/search-graphs.cpp.i
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/search-graphs.cpp.i
+.PHONY : search-graphs.cpp.i
+
+search-graphs.s: search-graphs.cpp.s
+
+.PHONY : search-graphs.s
+
+# target to generate assembly for a file
+search-graphs.cpp.s:
+	$(MAKE) -f CMakeFiles/search-graphs.dir/build.make CMakeFiles/search-graphs.dir/search-graphs.cpp.s
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/search-graphs.cpp.s
+.PHONY : search-graphs.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -244,6 +287,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... search-graphs"
 	@echo "... graphs"
 	@echo "... first_structures_cpp"
 	@echo "... data_structures_cpp"
@@ -256,6 +300,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... search-graphs.o"
+	@echo "... search-graphs.i"
+	@echo "... search-graphs.s"
 .PHONY : help
 
 
