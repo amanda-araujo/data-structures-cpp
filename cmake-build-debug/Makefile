@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ex1-bfs
+
+# Build rule for target.
+ex1-bfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex1-bfs
+.PHONY : ex1-bfs
+
+# fast build rule for target.
+ex1-bfs/fast:
+	$(MAKE) -f CMakeFiles/ex1-bfs.dir/build.make CMakeFiles/ex1-bfs.dir/build
+.PHONY : ex1-bfs/fast
+
+#=============================================================================
 # Target rules for targets named search-graphs
 
 # Build rule for target.
@@ -161,6 +174,36 @@ data_structures_cpp: cmake_check_build_system
 data_structures_cpp/fast:
 	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/build
 .PHONY : data_structures_cpp/fast
+
+Review-simple-graphs-alg/ex1-bfs.o: Review-simple-graphs-alg/ex1-bfs.cpp.o
+
+.PHONY : Review-simple-graphs-alg/ex1-bfs.o
+
+# target to build an object file
+Review-simple-graphs-alg/ex1-bfs.cpp.o:
+	$(MAKE) -f CMakeFiles/ex1-bfs.dir/build.make CMakeFiles/ex1-bfs.dir/Review-simple-graphs-alg/ex1-bfs.cpp.o
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/Review-simple-graphs-alg/ex1-bfs.cpp.o
+.PHONY : Review-simple-graphs-alg/ex1-bfs.cpp.o
+
+Review-simple-graphs-alg/ex1-bfs.i: Review-simple-graphs-alg/ex1-bfs.cpp.i
+
+.PHONY : Review-simple-graphs-alg/ex1-bfs.i
+
+# target to preprocess a source file
+Review-simple-graphs-alg/ex1-bfs.cpp.i:
+	$(MAKE) -f CMakeFiles/ex1-bfs.dir/build.make CMakeFiles/ex1-bfs.dir/Review-simple-graphs-alg/ex1-bfs.cpp.i
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/Review-simple-graphs-alg/ex1-bfs.cpp.i
+.PHONY : Review-simple-graphs-alg/ex1-bfs.cpp.i
+
+Review-simple-graphs-alg/ex1-bfs.s: Review-simple-graphs-alg/ex1-bfs.cpp.s
+
+.PHONY : Review-simple-graphs-alg/ex1-bfs.s
+
+# target to generate assembly for a file
+Review-simple-graphs-alg/ex1-bfs.cpp.s:
+	$(MAKE) -f CMakeFiles/ex1-bfs.dir/build.make CMakeFiles/ex1-bfs.dir/Review-simple-graphs-alg/ex1-bfs.cpp.s
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/Review-simple-graphs-alg/ex1-bfs.cpp.s
+.PHONY : Review-simple-graphs-alg/ex1-bfs.cpp.s
 
 first_structures_cpp.o: first_structures_cpp.cpp.o
 
@@ -287,10 +330,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... ex1-bfs"
 	@echo "... search-graphs"
 	@echo "... graphs"
 	@echo "... first_structures_cpp"
 	@echo "... data_structures_cpp"
+	@echo "... Review-simple-graphs-alg/ex1-bfs.o"
+	@echo "... Review-simple-graphs-alg/ex1-bfs.i"
+	@echo "... Review-simple-graphs-alg/ex1-bfs.s"
 	@echo "... first_structures_cpp.o"
 	@echo "... first_structures_cpp.i"
 	@echo "... first_structures_cpp.s"
