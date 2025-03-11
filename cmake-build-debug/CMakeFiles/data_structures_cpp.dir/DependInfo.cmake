@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/first_structures_cpp.cpp" "/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/data_structures_cpp.dir/first_structures_cpp.cpp.o"
+  "/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/graphs.cpp" "/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/data_structures_cpp.dir/graphs.cpp.o"
   "/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/main.cpp" "/mnt/c/Users/Amanda/CLionProjects/data-structures-cpp/cmake-build-debug/CMakeFiles/data_structures_cpp.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -4,5 +4,7 @@ project(data_structures_cpp)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(data_structures_cpp main.cpp
-        first_structures_cpp.cpp)
+        first_structures_cpp.cpp
+        graphs.cpp)
 add_executable(first_structures_cpp first_structures_cpp.cpp)
+add_executable(graphs graphs.cpp)

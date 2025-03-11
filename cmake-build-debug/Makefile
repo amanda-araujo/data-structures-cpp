@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named graphs
+
+# Build rule for target.
+graphs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graphs
+.PHONY : graphs
+
+# fast build rule for target.
+graphs/fast:
+	$(MAKE) -f CMakeFiles/graphs.dir/build.make CMakeFiles/graphs.dir/build
+.PHONY : graphs/fast
+
+#=============================================================================
 # Target rules for targets named first_structures_cpp
 
 # Build rule for target.
@@ -166,6 +179,36 @@ first_structures_cpp.cpp.s:
 	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/first_structures_cpp.cpp.s
 .PHONY : first_structures_cpp.cpp.s
 
+graphs.o: graphs.cpp.o
+
+.PHONY : graphs.o
+
+# target to build an object file
+graphs.cpp.o:
+	$(MAKE) -f CMakeFiles/graphs.dir/build.make CMakeFiles/graphs.dir/graphs.cpp.o
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/graphs.cpp.o
+.PHONY : graphs.cpp.o
+
+graphs.i: graphs.cpp.i
+
+.PHONY : graphs.i
+
+# target to preprocess a source file
+graphs.cpp.i:
+	$(MAKE) -f CMakeFiles/graphs.dir/build.make CMakeFiles/graphs.dir/graphs.cpp.i
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/graphs.cpp.i
+.PHONY : graphs.cpp.i
+
+graphs.s: graphs.cpp.s
+
+.PHONY : graphs.s
+
+# target to generate assembly for a file
+graphs.cpp.s:
+	$(MAKE) -f CMakeFiles/graphs.dir/build.make CMakeFiles/graphs.dir/graphs.cpp.s
+	$(MAKE) -f CMakeFiles/data_structures_cpp.dir/build.make CMakeFiles/data_structures_cpp.dir/graphs.cpp.s
+.PHONY : graphs.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -201,11 +244,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... graphs"
 	@echo "... first_structures_cpp"
 	@echo "... data_structures_cpp"
 	@echo "... first_structures_cpp.o"
 	@echo "... first_structures_cpp.i"
 	@echo "... first_structures_cpp.s"
+	@echo "... graphs.o"
+	@echo "... graphs.i"
+	@echo "... graphs.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
